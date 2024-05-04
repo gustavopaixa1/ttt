@@ -1,0 +1,28 @@
+<head>
+</head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralizar h1</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+
+    
+<div>
+    <h1>Chat - Programação Funcional</h1>
+    <div class="h-96 border ">
+        <%= for m <- @messages do %>
+            <p><%= m.name %> </p>
+            <p><%= m.text %> </p>
+        <% end  %>
+    </div>
+    
+    <form phx-submit="send">
+        <input type="text" name="text"/>
+        <button>Send</button>
+    </form>
+</div>
